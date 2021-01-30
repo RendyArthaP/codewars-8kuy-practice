@@ -108,3 +108,31 @@ const flip=(d, a)=>{
   if(d === 'L') 
     return a.sort((a,b)=>b-a);
 }
+
+// Sum If Positive
+function positiveSum(arr) {
+  var total = 0;
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] > 0) {
+      total += arr[i]
+    }
+  }
+  return total;
+}
+
+// Calculate BMI
+function bmi(weight, height) {
+  var totalBmi = weight / Math.pow(height, 2)
+  
+  if(totalBmi <= 18.5) {
+    return "Underweight"
+  } else if(totalBmi <= 25) {
+    return "Normal"
+  } else if(totalBmi <= 30) {
+    return "Overweight"
+  } else {
+    return "Obese"
+  }
+}
+
+// Beginner Series #1 School Paperwork
