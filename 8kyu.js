@@ -136,3 +136,36 @@ function bmi(weight, height) {
 }
 
 // Beginner Series #1 School Paperwork
+function paperwork(n, m) {
+  if(n < 0 || m < 0) {
+    return 0
+  } else {
+    return n*m
+  }
+}
+
+// Smallest unused ID
+function nextId(ids){
+  const newIds = ids.filter((item, position, self) => self.indexOf(item) === position).sort((x,y) => x-y);
+
+  if(newIds[0] !== 0) {
+    return 0;
+  }
+
+  for(let i = 0, j = 1; i <= newIds.length; i += 1, j += 1 ) {
+    if(newIds[i] - newIds[j] !== -1) {
+      return newIds[i] += 1;
+    } 
+  }
+}
+
+// Super Duper Easy
+function problem(x) {
+  var num = (x * 50) + 6;
+  
+  if(typeof x === 'string') {
+    return "Error"
+  } else {
+    return num
+  }
+}
