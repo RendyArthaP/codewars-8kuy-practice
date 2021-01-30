@@ -61,7 +61,7 @@ function getChar(c){
   return String.fromCharCode(c)
 }
 
-// Invert Values
+// Invert Array Values
 function invert(array) {
   var newArray = [];
   for(let i = 0; i < array.length; i++) {
@@ -94,4 +94,17 @@ function getDrinkByProfession(param){
    default:
      return 'Beer'
   }
+}
+
+// Return Negative 
+function makeNegative(num) {
+  return -Math.abs(num);
+}
+
+// Gravity Flip
+const flip=(d, a)=>{
+  if(d === 'R') 
+    return a.sort((a,b)=>a-b);
+  if(d === 'L') 
+    return a.sort((a,b)=>b-a);
 }
