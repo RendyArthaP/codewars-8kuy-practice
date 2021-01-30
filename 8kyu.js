@@ -169,3 +169,29 @@ function problem(x) {
     return num
   }
 }
+
+// Are Arrow Function odd?
+function odds(values){
+  return values.filter(value => value % 2);
+}
+
+// Parse nice int from char problem
+function getAge(inputString){
+  return parseInt(inputString.charAt(0))
+}
+
+// CSV representation of array
+
+// N-th Power
+function index(array, n){
+  if(array.length <= n || 0 > n) {
+    return -1
+  } else {
+    return Math.pow(array[n], n)
+  }
+}
+
+// Aspect Ratio Cropping - Part 1
+function aspectRatio(x,y){
+  return [Math.ceil(y * (16 / 9)), y]
+}
