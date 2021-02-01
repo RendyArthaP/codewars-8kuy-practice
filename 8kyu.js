@@ -190,3 +190,32 @@ function index(array, n) {
 function aspectRatio(x, y) {
   return [Math.ceil(y * (16 / 9)), y];
 }
+
+// My head is at the wrong end!
+function fixTheMeerkat(arr) {
+  return arr.reverse()
+}
+
+// Do I get Bonus?
+function bonusTime(salary, bonus) {
+  // Answer 1
+  var totalBonus = (salary * 10).toString();
+  var logo = '£';
+  var resultWithBonus = logo.concat(totalBonus);
+  var resultSalary = logo.concat(salary).toString()
+
+  if(bonus == true) {
+    return resultWithBonus;
+  } else if(bonus === false) {
+    return resultSalary;
+  }
+
+  // Answer 2
+  return bonus ? `£${10 * salary}` : `£${salary}`;
+
+  // Answer 3
+  return '£' + salary * (bonus ? 10 : 1);
+
+  // Answer 4
+  return '£'+(bonus ? salary*10:salary)
+}
