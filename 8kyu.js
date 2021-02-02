@@ -304,4 +304,50 @@ function sumOfDifferences(arr) {
     return 0
   arr.sort((a,b)=>a-b)
   return arr[arr.length-1]-arr[0]
+}
+
+// Get the mean of an array
+function getAverage(marks){
+  // Answer 1
+  let total = 0;
+  for(let i = 0; i < marks.length; i++) {
+    total += marks[i]
   }
+  return Math.floor(total / marks.length)
+
+  // Answer 2
+  return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+
+  // Answer 3
+  return Math.floor(marks.reduce((a, b) => a + b, 0) / marks.length);
+}
+
+// Lario and Muigi Pipe Problem
+function pipeFix(numbers){
+  // Answer 1
+  const angkaMax = Math.max.apply(null, numbers)
+  let result = [];
+
+  for(let i = Math.min.apply(null, numbers); i <= angkaMax; i++) {
+    result.push(i)
+  }
+  return result;
+
+  // Answer 2
+  var first = numbers[0];
+  var last = numbers[numbers.length-1];
+  
+  var arr = [];
+  for(var i = first; i <= last; i++) {
+    arr.push(i);
+  }
+  return arr;
+
+  // Answer 3
+  for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] !== numbers[i+1]-1 && i < numbers.length-1 ) {
+      numbers.splice(i+1,0,numbers[i]+1);
+    } 
+  }
+  return numbers;
+}
