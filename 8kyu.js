@@ -176,6 +176,28 @@ function getAge(inputString) {
 }
 
 // CSV representation of array
+function toCsvText(arrays) {
+  // Answer 1
+  let result = '';
+
+  arrays.map((array, indexArray) => {
+   array.map((arr, indexArr) => {
+     result += arr;
+     if(indexArr < array.length - 1) {
+       result += ',';
+     } else if(indexArray < arrays.length - 1) {
+       result += '\n';
+     }
+   })
+  })
+  return result
+
+  // Answer 2
+  return array.join('\n');
+
+  // Answer 3
+  array.map(row => row.join(',')).join('\n');
+}
 
 // N-th Power
 function index(array, n) {
@@ -246,5 +268,40 @@ function pointsPer48(ppg, mpg) {
 
 // Find the position!
 function position(letter){
+  // Answer 1
   return `Position of alphabet: ${letter.charCodeAt()-96}` 
+
+  // Answer 2
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  return 'Position of alphabet: ' + (alphabet.indexOf(letter) + 1);
 }
+
+// Sum of differences in array
+function sumOfDifferences(arr) {
+  // Answer 1
+  const sortArr = arr.sort((a,b) => b-a)
+  let sum = 0;
+
+  for(let i = 1; i < sortArr.length; i++) {
+    sum += sortArr[i - 1] - sortArr[i]
+  }
+  return(sum)
+
+  // Answer 2
+  arr
+    .sort((a, b) => b - a)
+    .map((a, i) => a - arr[i + 1] || 0)
+    .reduce((a, b) => a + b, 0);
+
+  // Answer 3
+  return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+
+  // Answer 4
+  arr.sort((a, b) => b - a).shift() - arr.pop() || 0;
+
+  // Answer 5
+  if (arr.length==0)
+    return 0
+  arr.sort((a,b)=>a-b)
+  return arr[arr.length-1]-arr[0]
+  }
