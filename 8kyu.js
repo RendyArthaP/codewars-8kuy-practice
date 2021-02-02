@@ -225,3 +225,26 @@ function addFive(num) {
   var total = num + 5
   return total
 }
+
+// Convert a Boolean to a String
+function booleanToString(b){
+  // Answer 1
+  return b.toString();
+
+  // Answer 2
+  return String(b);
+}
+
+// NBA full 48 minutes average
+function pointsPer48(ppg, mpg) {
+  if(ppg === 0 || mpg === 0) {
+    return 0
+  } else {
+    return Number((ppg / mpg *48).toFixed(1))
+  }
+}
+
+// Find the position!
+function position(letter){
+  return `Position of alphabet: ${letter.charCodeAt()-96}` 
+}
