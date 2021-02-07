@@ -178,25 +178,25 @@ function getAge(inputString) {
 // CSV representation of array
 function toCsvText(arrays) {
   // Answer 1
-  let result = '';
+  let result = "";
 
   arrays.map((array, indexArray) => {
-   array.map((arr, indexArr) => {
-     result += arr;
-     if(indexArr < array.length - 1) {
-       result += ',';
-     } else if(indexArray < arrays.length - 1) {
-       result += '\n';
-     }
-   })
-  })
-  return result
+    array.map((arr, indexArr) => {
+      result += arr;
+      if (indexArr < array.length - 1) {
+        result += ",";
+      } else if (indexArray < arrays.length - 1) {
+        result += "\n";
+      }
+    });
+  });
+  return result;
 
   // Answer 2
-  return array.join('\n');
+  return array.join("\n");
 
   // Answer 3
-  array.map(row => row.join(',')).join('\n');
+  array.map(row => row.join(",")).join("\n");
 }
 
 // N-th Power
@@ -215,20 +215,20 @@ function aspectRatio(x, y) {
 
 // My head is at the wrong end!
 function fixTheMeerkat(arr) {
-  return arr.reverse()
+  return arr.reverse();
 }
 
 // Do I get Bonus?
 function bonusTime(salary, bonus) {
   // Answer 1
   var totalBonus = (salary * 10).toString();
-  var logo = '£';
+  var logo = "£";
   var resultWithBonus = logo.concat(totalBonus);
-  var resultSalary = logo.concat(salary).toString()
+  var resultSalary = logo.concat(salary).toString();
 
-  if(bonus == true) {
+  if (bonus == true) {
     return resultWithBonus;
-  } else if(bonus === false) {
+  } else if (bonus === false) {
     return resultSalary;
   }
 
@@ -236,20 +236,20 @@ function bonusTime(salary, bonus) {
   return bonus ? `£${10 * salary}` : `£${salary}`;
 
   // Answer 3
-  return '£' + salary * (bonus ? 10 : 1);
+  return "£" + salary * (bonus ? 10 : 1);
 
   // Answer 4
-  return '£'+(bonus ? salary*10:salary)
+  return "£" + (bonus ? salary * 10 : salary);
 }
 
 // Grasshopper - Basic Function Fixer
 function addFive(num) {
-  var total = num + 5
-  return total
+  var total = num + 5;
+  return total;
 }
 
 // Convert a Boolean to a String
-function booleanToString(b){
+function booleanToString(b) {
   // Answer 1
   return b.toString();
 
@@ -259,33 +259,37 @@ function booleanToString(b){
 
 // NBA full 48 minutes average
 function pointsPer48(ppg, mpg) {
-  if(ppg === 0 || mpg === 0) {
-    return 0
+  if (ppg === 0 || mpg === 0) {
+    return 0;
   } else {
-    return Number((ppg / mpg *48).toFixed(1))
+    return Number(((ppg / mpg) * 48).toFixed(1));
   }
 }
 
 // Find the position!
-function position(letter){
+function position(letter) {
   // Answer 1
-  return `Position of alphabet: ${letter.charCodeAt()-96}` 
+  return `Position of alphabet: ${letter.charCodeAt() - 96}`;
 
   // Answer 2
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  return 'Position of alphabet: ' + (alphabet.indexOf(letter) + 1);
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  return "Position of alphabet: " + (alphabet.indexOf(letter) + 1);
 }
 
 // Sum of differences in array
+
+// kumpulan array yang angkanya tidak berurutan.
+// hitung jumlah keseluruhannya dengan rumus (a-b)+(b-c)
+// penjumlahan tersebut angka paling besar harus berada di depan, dan kecil di belakang
 function sumOfDifferences(arr) {
   // Answer 1
-  const sortArr = arr.sort((a,b) => b-a)
+  const sortArr = arr.sort((a, b) => b - a);
   let sum = 0;
 
-  for(let i = 1; i < sortArr.length; i++) {
-    sum += sortArr[i - 1] - sortArr[i]
+  for (let i = 1; i < sortArr.length; i++) {
+    sum += sortArr[i - 1] - sortArr[i];
   }
-  return(sum)
+  return sum;
 
   // Answer 2
   arr
@@ -300,20 +304,23 @@ function sumOfDifferences(arr) {
   arr.sort((a, b) => b - a).shift() - arr.pop() || 0;
 
   // Answer 5
-  if (arr.length==0)
-    return 0
-  arr.sort((a,b)=>a-b)
-  return arr[arr.length-1]-arr[0]
+  if (arr.length == 0) return 0;
+  arr.sort((a, b) => a - b);
+  return arr[arr.length - 1] - arr[0];
 }
 
 // Get the mean of an array
-function getAverage(marks){
+
+// Menjumlahkan seluruh angka dalam array,
+// lalu mencari rata-rata berdasarkan panjang array.
+// Pembulatan ke bawah
+function getAverage(marks) {
   // Answer 1
   let total = 0;
-  for(let i = 0; i < marks.length; i++) {
-    total += marks[i]
+  for (let i = 0; i < marks.length; i++) {
+    total += marks[i];
   }
-  return Math.floor(total / marks.length)
+  return Math.floor(total / marks.length);
 
   // Answer 2
   return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
@@ -323,44 +330,106 @@ function getAverage(marks){
 }
 
 // Lario and Muigi Pipe Problem
-function pipeFix(numbers){
+
+// Mencari angka awal, dan akhir.
+// Buat urutan angka yang hilang dengan mengganti menjadi array baru
+function pipeFix(numbers) {
   // Answer 1
-  const angkaMax = Math.max.apply(null, numbers)
+  const angkaMax = Math.max.apply(null, numbers);
   let result = [];
 
-  for(let i = Math.min.apply(null, numbers); i <= angkaMax; i++) {
-    result.push(i)
+  for (let i = Math.min.apply(null, numbers); i <= angkaMax; i++) {
+    result.push(i);
   }
   return result;
 
   // Answer 2
   var first = numbers[0];
-  var last = numbers[numbers.length-1];
-  
+  var last = numbers[numbers.length - 1];
+
   var arr = [];
-  for(var i = first; i <= last; i++) {
+  for (var i = first; i <= last; i++) {
     arr.push(i);
   }
   return arr;
 
   // Answer 3
   for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] !== numbers[i+1]-1 && i < numbers.length-1 ) {
-      numbers.splice(i+1,0,numbers[i]+1);
-    } 
+    if (numbers[i] !== numbers[i + 1] - 1 && i < numbers.length - 1) {
+      numbers.splice(i + 1, 0, numbers[i] + 1);
+    }
   }
   return numbers;
 }
 
 // Drink About
+
+// Membuat statement
+// Membuat perbandingan lebih kecil
+// lalu return sesuai kebutuhan
 function peopleWithAgeDrink(old) {
-  if(old < 14) {
-    return ('drink toddy')
-  } else if(old < 18) {
-    return ('drink coke')
-  } else if(old < 21) {
-    return ('drink beer')
+  if (old < 14) {
+    return "drink toddy";
+  } else if (old < 18) {
+    return "drink coke";
+  } else if (old < 21) {
+    return "drink beer";
   } else {
-    return ('drink whisky')
+    return "drink whisky";
   }
-};
+}
+
+// Palindrome Strings
+function isPalindrome(line) {
+  // Answer 1
+  let normalize = line.toString().toLowerCase();
+  let result = "";
+  console.log(normalize);
+  for (let i = 0; i < normalize.length; i++) {
+    result = normalize[i] + result;
+  }
+  if (result === normalize) {
+    return true;
+  } else {
+    return false;
+  }
+
+  // Answer 2
+  return line.toString() == line.toString().split("").reverse().join("");
+}
+
+// How much water do i need?
+function howMuchWater(water, load, clothes){
+  // Answer 1
+  if(clothes > load * 2) return 'Too much clothes'
+  if(clothes < load) return 'Not enough clothes'
+  
+  return +((water * 1.1 ** (clothes - load)).toFixed(2))
+
+  // Answer 2
+  clothes > 2 * load ? 'Too much clothes' 
+  : clothes < load ? 'Not enough clothes' 
+  : Math.round(water * Math.pow(1.1, clothes-load)*100)/100;
+
+  // Answer 3
+  if(clothes >= 2 * load){
+    return 'Too much clothes';
+  } else if(clothes < load){
+    return 'Not enough clothes';
+  } else {
+    return Math.round(water * Math.pow(1.1,(clothes-load))*100)/100;
+  }
+}
+
+// Is he gonna survive? 
+function hero(bullets, dragons){
+  // Answer 1
+  if(bullets >= dragons*2) {
+    return true
+  } else {
+    return false
+  }
+
+  // Answer 2
+  return (bullets >= dragons * 2) ? true : false;
+}

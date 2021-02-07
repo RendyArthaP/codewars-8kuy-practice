@@ -2,6 +2,7 @@
 const huruf = "abcdefghijklmnopqrstuvwxyz"
 
 function solve(s) {
+  // Answer 1
   var str = s.length;
   var mid = Math.floor(str / 2);
 
@@ -15,4 +16,26 @@ function solve(s) {
     }
   }
     return true
+
+  // Answer 2
+  const middle = s.length / 2;
+
+  for (let i = 0; i < middle; i++) {
+    const first = s[i].charCodeAt()
+    const last = s[s.length - (i + 1)].charCodeAt()
+    const distance = Math.abs(last - first)
+    if (distance > 2 || distance === 1) return false
+  }
+  return true
+
+  // Answer 3
+  let arr = s.split('').map(v => v.charCodeAt(0))
+  let a = arr.slice(0,arr.length/2)
+  let b = arr.slice(Math.ceil(arr.length/2)).reverse()
+  let temp
+  for (let i = 0; i < a.length; ++i) {
+    temp = Math.abs(a[i] - b[i])
+    if (temp !== 0 && temp !== 2) return false
+  }
+  return true
 }
