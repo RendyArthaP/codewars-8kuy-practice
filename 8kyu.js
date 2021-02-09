@@ -439,11 +439,30 @@ function warnTheSheep(queue) {
   // Answer 1
   const index = queue.indexOf('wolf')
   return index === queue.length-1 
-  ? "Pls go away and stop eating my sheep"
-  : `Oi! Sheep number ${queue.length-1-index}! You are about to be eaten by a wolf!`
+    ? "Pls go away and stop eating my sheep"
+    : `Oi! Sheep number ${queue.length-1-index}! You are about to be eaten by a wolf!`
 
   // Answer 2
   const position = queue.reverse().indexOf('wolf');
-  return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
+  return position === 0 
+    ? 'Pls go away and stop eating my sheep' 
+    : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
+}
 
+// Filling an array(part1)
+const arr = N => {
+  // Answer 1
+  var emptyArray = [];
+  for(let i = 0; i < N; i++) {
+    emptyArray.push(i)
+  }
+
+  // Answer 2
+  Array.from({length: N}, (_, i) => i);
+}
+
+// USD => CNY
+function usdcny(usd) {
+  const chineseConverter = usd * 6.75
+  return chineseConverter.toFixed(2) + ' Chinese Yuan'.toString()
 }
