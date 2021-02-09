@@ -433,3 +433,17 @@ function hero(bullets, dragons){
   // Answer 2
   return (bullets >= dragons * 2) ? true : false;
 }
+
+// A wolf in sheep's clothing
+function warnTheSheep(queue) {
+  // Answer 1
+  const index = queue.indexOf('wolf')
+  return index === queue.length-1 
+  ? "Pls go away and stop eating my sheep"
+  : `Oi! Sheep number ${queue.length-1-index}! You are about to be eaten by a wolf!`
+
+  // Answer 2
+  const position = queue.reverse().indexOf('wolf');
+  return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
+
+}
