@@ -39,3 +39,16 @@ function solve(s) {
   }
   return true
 }
+
+// You're square
+var isSquare = function(n){
+  // Answer 1
+  if(Math.sqrt(n) % 1 === 0) {
+    return true
+  } else {
+    return false
+  }
+  
+  // Answer 2
+  Number.isInteger(Math.sqrt(n));
+}
