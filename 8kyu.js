@@ -520,3 +520,19 @@ function square(n) {
 function formatMoney(amount){
   return '$' + amount.toFixed(2)
 }
+
+// Will there be enough space?
+function enough(cap, on, wait) {
+  // Answer 1
+  return (on + wait > cap) ? on + wait - cap : 0;
+
+  // Answer 2
+  return Math.max(wait + on - cap, 0);
+
+  // Anwer 3
+  if (on + wait < cap){
+    return 0;
+  } else {
+    return (on + wait) - cap;
+  }
+}
