@@ -492,6 +492,16 @@ function iceBrickVolume(radius, bottleLength, rimLength) {
 }
 
 // Convert to binary
-function toBinary(n){
+function toBinary(n) {
+  // Answer 1
   return +n.toString(2)
+}
+
+// Take the derivative
+function derive(coefficient,exponent) {
+  // Answer 1
+  return `${coefficient * exponent}x^${exponent-1}`
+
+  // Answer 2
+  return (a * b) + "x^" + (b - 1);
 }
