@@ -478,3 +478,15 @@ function sumStr(a,b) {
   // Answer 3
   return ((parseInt(a) || 0) + (parseInt(b) || 0)).toString();
 }
+
+// For Twins2: Math Operations
+function iceBrickVolume(radius, bottleLength, rimLength) {
+  // Answer 1
+  return 2 * radius * radius * (bottleLength - rimLength)
+
+  // Answer 2
+  if (radius > 0 && bottleLength > 0 && rimLength < bottleLength) {
+    let brickHeight = bottleLength - rimLength;
+    return brickHeight * 2 * Math.pow(radius, 2);
+  }
+}
