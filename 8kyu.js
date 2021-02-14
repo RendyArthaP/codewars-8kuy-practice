@@ -505,3 +505,18 @@ function derive(coefficient,exponent) {
   // Answer 2
   return (a * b) + "x^" + (b - 1);
 }
+
+// Function2 - Squaring an argument
+function square(n) {
+  // Answer 1
+  return n*n
+
+  // Answer 2
+  var num = Math.pow(num, 2);
+  return num;
+}
+
+// Dollar and Cents
+function formatMoney(amount){
+  return '$' + amount.toFixed(2)
+}
