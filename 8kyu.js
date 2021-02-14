@@ -490,3 +490,8 @@ function iceBrickVolume(radius, bottleLength, rimLength) {
     return brickHeight * 2 * Math.pow(radius, 2);
   }
 }
+
+// Convert to binary
+function toBinary(n){
+  return +n.toString(2)
+}
