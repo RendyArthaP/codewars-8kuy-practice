@@ -466,3 +466,15 @@ function usdcny(usd) {
   const chineseConverter = usd * 6.75
   return chineseConverter.toFixed(2) + ' Chinese Yuan'.toString()
 }
+
+// Sum The Strings
+function sumStr(a,b) {
+  // Answer 1
+  return String(Number(a)+Number(b));
+
+  // Answer 2
+  return (+a+ +b)+'' 
+
+  // Answer 3
+  return ((parseInt(a) || 0) + (parseInt(b) || 0)).toString();
+}
