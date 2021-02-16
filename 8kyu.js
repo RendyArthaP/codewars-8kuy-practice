@@ -552,3 +552,8 @@ function grow(x){
   }
   return res;
 }
+
+// Beginner - Lost Without a Map
+function maps(x){
+  return x.map(y => y * 2)
+}
