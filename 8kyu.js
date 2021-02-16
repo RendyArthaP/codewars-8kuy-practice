@@ -536,3 +536,19 @@ function enough(cap, on, wait) {
     return (on + wait) - cap;
   }
 }
+
+// Beginner - Reduce but Grow
+function grow(x){
+  // Answer 1
+  return x.reduce((a, b) => a * b)
+
+  // Answer 2
+  eval(x.join("*"))
+
+  // Answer 3
+  let res = 1;
+  for (let i = 0; i < x.length; i++) {
+    res *= x[i];
+  }
+  return res;
+}
