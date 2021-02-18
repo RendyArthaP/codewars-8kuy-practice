@@ -557,3 +557,12 @@ function grow(x){
 function maps(x){
   return x.map(y => y * 2)
 }
+
+// Transportation on vacation
+function rentalCarCost(d) {
+  // Answer 1
+  const base = 40
+  if (d >= 7) return d * base - 50
+  if (d >= 3) return d * base - 20
+  return d * base
+}
