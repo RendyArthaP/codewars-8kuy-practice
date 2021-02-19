@@ -569,6 +569,20 @@ function rentalCarCost(d) {
 
 // Century from year
 function century(year) {
+  // Answer 1
   const result = String(year / 100).split('.')
   return result.length === 2 ? Number(result[0]) + 1 : Number(result[0])
+
+  // Anwer 2
+  return Math.ceil(year/100)
+}
+
+// Pre-FizzBuzz Workout #1
+function preFizz(n) {
+  var output = [];
+  for (var i=1; i<=n; i++)
+  {
+    output.push(i);
+  }
+  return output;
 }
