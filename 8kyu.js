@@ -579,10 +579,23 @@ function century(year) {
 
 // Pre-FizzBuzz Workout #1
 function preFizz(n) {
+  // Answer 1
   var output = [];
   for (var i=1; i<=n; i++)
   {
     output.push(i);
   }
   return output;
+
+  // Answer 2
+  return [...Array(n)].map((_, i) => ++i)
+}
+
+// Grasshopper - Summation
+var summation = function (num) {
+  var result = 0
+  for(let i = 0; i <= num; i++) {
+    result += i
+  }
+  return result
 }
