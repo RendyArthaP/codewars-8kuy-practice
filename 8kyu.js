@@ -593,9 +593,22 @@ function preFizz(n) {
 
 // Grasshopper - Summation
 var summation = function (num) {
+  // Answer 1
   var result = 0
   for(let i = 0; i <= num; i++) {
     result += i
   }
   return result
+
+  // Answer 2
+  return num * (num + 1) / 2
+}
+
+// Grashopper - Personalized message
+function greet(name, owner) {
+  if(name === owner) {
+    return "Hello boss"
+  } else {
+    return "Hello guest"
+  }
 }
