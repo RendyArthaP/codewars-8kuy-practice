@@ -612,3 +612,18 @@ function greet(name, owner) {
     return "Hello guest"
   }
 }
+
+// Function 3 - multiplying two numbers
+function multiply(a, b) {
+  return a * b
+}
+
+// Filter out the geese
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  // Answer 1
+  return birds.filter( bird => !geese.includes(bird));
+
+  // Answer 2
+  return birds.filter( bird => geese.indexOf(bird) < 0 );
+};
