@@ -674,6 +674,10 @@ var name = a + b
 
 // Fake Binary
 function fakeBin(x) {
+  // Answer 1
   var stringNum = x.split('')
   return stringNum.map(num => (Number(num) >= 5 ? 1 : 0)).join('')
+
+  // Answer 2
+  return x.replace(/\d/g, d => d < 5 ? 0 : 1);
 }
