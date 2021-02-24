@@ -665,3 +665,15 @@ function stringy(size) {
   // Answer 2
   return [...new Array(size)].map((element, i) => (i % 2 === 0 ? 1 : 0)).join('')
 }
+
+// Grasshopper - Variable Assignment Debug
+var a = "dev"
+var b = "Lab"
+
+var name = a + b
+
+// Fake Binary
+function fakeBin(x) {
+  var stringNum = x.split('')
+  return stringNum.map(num => (Number(num) >= 5 ? 1 : 0)).join('')
+}
