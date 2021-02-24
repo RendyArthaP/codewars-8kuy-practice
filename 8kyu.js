@@ -653,3 +653,15 @@ function solution(str){
   // Answer 2
   return str.split('').reverse().join('');
 }
+
+// Stringy Strings
+function stringy(size) {
+  // Answer 1
+  var str='';
+  for( var i=1; i<=size; i++ )
+    str+=i%2;
+  return str;
+
+  // Answer 2
+  return [...new Array(size)].map((element, i) => (i % 2 === 0 ? 1 : 0)).join('')
+}
