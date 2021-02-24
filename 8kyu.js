@@ -640,3 +640,16 @@ function boolToWord( bool ){
   // Answer 2
   return bool ? 'Yes':'No';
 }
+
+// Reversed Strings
+function solution(str){
+  // Answer 1
+  var strArray = str.split("")
+  var revArray = strArray.reverse()
+  var joinString = revArray.join("")
+
+  return joinString
+
+  // Answer 2
+  return str.split('').reverse().join('');
+}
