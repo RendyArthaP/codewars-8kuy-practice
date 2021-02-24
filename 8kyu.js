@@ -627,3 +627,16 @@ function gooseFilter (birds) {
   // Answer 2
   return birds.filter( bird => geese.indexOf(bird) < 0 );
 };
+
+// Convert boolean values to strings 'Yes' or 'No'.
+function boolToWord( bool ){
+  // Answer 1
+  if(bool === true) {
+    return ("Yes")
+  } else {
+    return ("No")
+  }
+
+  // Answer 2
+  return bool ? 'Yes':'No';
+}
