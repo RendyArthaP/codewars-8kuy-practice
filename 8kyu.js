@@ -681,3 +681,8 @@ function fakeBin(x) {
   // Answer 2
   return x.replace(/\d/g, d => d < 5 ? 0 : 1);
 }
+
+// Reverse Words
+function reverseWords(str){
+  return str.split(" ").reverse().join(" ")
+}
