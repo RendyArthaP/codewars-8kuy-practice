@@ -686,3 +686,9 @@ function fakeBin(x) {
 function reverseWords(str){
   return str.split(" ").reverse().join(" ")
 }
+
+// Function1 - hello world
+function greet() {
+  return "hello world!" 
+ }
+ 
