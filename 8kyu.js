@@ -715,4 +715,13 @@ function uefaEuro2016(teams, scores){
   // Answer 2
   `At match ${teams[0]} - ${teams[1]}, ${scores[0] === scores[1] ? `teams played draw.` : `${scores[0] > scores[1] ? teams[0] : teams[1]} won!`}`;
 }
- 
+
+// Total pressure calculation
+function solution(M1, M2, m1, m2, V, T) {
+  M1 = m1 * 0.001/M1;
+  M2 = m2 * 0.001/M2;
+  T = T + 273.15;
+  var R = 0.082;
+
+return (((M1 + M2) * R * T) / V) * 1000;
+}
