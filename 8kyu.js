@@ -691,4 +691,13 @@ function reverseWords(str){
 function greet() {
   return "hello world!" 
  }
+
+// Grasshopper - Terminal game move function
+ function move (position, roll) {
+  //  Answer 1
+  return (position + roll) + roll
+
+  // Answer 2
+  return position + roll * 2
+}
  
