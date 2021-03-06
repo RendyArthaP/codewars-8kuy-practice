@@ -728,5 +728,34 @@ return (((M1 + M2) * R * T) / V) * 1000;
 
 // Convert number to string
 function numberToString(num) {
+  // Answer 1
   return num.toString()
+
+  // Answer 2
+  return String(num);
+}
+
+// You Can't Code Under Pressure #1
+function doubleInteger(i) {
+  return i * 2
+}
+
+// Beginner Series #4 Cockroach
+function cockroachSpeed(s) {
+  // Answer 1
+  return Math.floor(s * (100000 / 3600))
+
+  // Answer 2
+  Math.floor(s / 0.036);
+
+  // Answer 3
+  const secsInHour = 3600;
+  const centimetersInKilometers = 100000;
+  
+  return Math.floor((s*centimetersInKilometers)/secsInHour);
+}
+
+// Opposites attract
+function lovefunc(flower1, flower2){
+  return flower1 % 2 !== flower2 % 2
 }
