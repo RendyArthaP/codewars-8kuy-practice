@@ -725,3 +725,8 @@ function solution(M1, M2, m1, m2, V, T) {
 
 return (((M1 + M2) * R * T) / V) * 1000;
 }
+
+// Convert number to string
+function numberToString(num) {
+  return num.toString()
+}
