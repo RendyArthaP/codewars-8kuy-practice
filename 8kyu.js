@@ -768,3 +768,8 @@ function lovefunc(flower1, flower2) {
 function converter (mpg) {
   return Number((mpg * 0.3540060435382138).toFixed(2))
 }
+
+// Beginner Series #2 Clock
+function past(h, m, s){
+  return (h * 3600 + m * 60 + s) * 1000
+}
