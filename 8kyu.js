@@ -756,6 +756,15 @@ function cockroachSpeed(s) {
 }
 
 // Opposites attract
-function lovefunc(flower1, flower2){
+function lovefunc(flower1, flower2) {
+  // Answer 1
   return flower1 % 2 !== flower2 % 2
+
+  // Answer 2
+  return (flower1 + flower2) % 2 === 1
+}
+
+// Miles per gallon to kilometers per liter
+function converter (mpg) {
+  return Number((mpg * 0.3540060435382138).toFixed(2))
 }
