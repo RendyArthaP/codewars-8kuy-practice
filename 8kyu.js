@@ -770,6 +770,16 @@ function converter (mpg) {
 }
 
 // Beginner Series #2 Clock
-function past(h, m, s){
+function past(h, m, s) {
+  // Answer 1
   return (h * 3600 + m * 60 + s) * 1000
+
+  // Answer 2
+  const setTime = new Date().setHours(h, m, s);
+  const midnight = new Date().setHours(0, 0, 0);
+  
+  return Math.round(setTime - midnight);
 }
+
+// Sum mixed array
+const sumMix = x => x.reduce((total, value) => total + Number(value), 0)
