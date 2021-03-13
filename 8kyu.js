@@ -782,4 +782,14 @@ function past(h, m, s) {
 }
 
 // Sum mixed array
+// Answer 1
 const sumMix = x => x.reduce((total, value) => total + Number(value), 0)
+
+// Answer 2
+function sumMix(x){
+  let result = 0;
+  for (let n of x) {
+    result += parseInt(n);
+  }
+  return result;
+}
