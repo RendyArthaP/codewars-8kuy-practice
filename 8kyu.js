@@ -847,3 +847,12 @@ var min = function(list){
 var max = function(list){
   return Math.max.apply(null,list);
 }
+
+// The most asked question on CodeWars
+function detect(comment) {
+  // Answer 1
+  return comment.startsWith(`Can someone explain`)
+
+  // Answer 2
+  return (comment.indexOf('Can someone explain') === 0);
+}
