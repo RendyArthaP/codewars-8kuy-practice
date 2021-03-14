@@ -815,3 +815,21 @@ class Ball {
 var Ball = function(ballType) {
   this.ballType = ballType || 'regular';
 };
+
+// Squash the bugs
+// Answer 1
+const findLongest = string => Math.max(...string.split(' ').map(word => word.length)) 
+
+// Answer 2
+function findLongest(str) {
+  var spl = str.split(" "),
+      longest = 0;
+  
+  for (var i in spl) {
+    if (spl[i].length > longest) {
+      longest = spl[i].length;
+    }
+  }
+
+  return longest;
+}
