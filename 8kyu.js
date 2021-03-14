@@ -833,3 +833,17 @@ function findLongest(str) {
 
   return longest;
 }
+
+// Find Maximum and Minimum Values of a List
+// Answer 1
+const min = list => Math.min(...list)
+const max = list => Math.max(...list)
+
+// Answer 2
+var min = function(list){
+  return Math.min.apply(null,list);
+}
+
+var max = function(list){
+  return Math.max.apply(null,list);
+}
