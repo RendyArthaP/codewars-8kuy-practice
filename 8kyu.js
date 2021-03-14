@@ -856,3 +856,20 @@ function detect(comment) {
   // Answer 2
   return (comment.indexOf('Can someone explain') === 0);
 }
+
+// Holiday VI - Shark Pontoon
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
+  // Answer 1
+  if(dolphin) {
+    sharkSpeed /= 2
+  }
+  return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? "Alive!" : "Shark Bait!"
+
+  // Answer 2
+  const shark = (pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) => {
+    let youTime = pontoonDistance / youSpeed
+    let sharkTime = sharkDistance / (dolphin ? sharkSpeed / 2 : sharkSpeed)
+    
+    return sharkTime < youTime ? 'Shark Bait!' : 'Alive!'
+  }
+}
