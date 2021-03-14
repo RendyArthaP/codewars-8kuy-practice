@@ -802,3 +802,16 @@ function feast(beast, dish) {
   // Answer 2
   return beast[0]===dish[0] && beast.slice(-1)===dish.slice(-1);
 }
+
+// Regular Ball Super Ball
+// Answer 1
+class Ball {
+  constructor(ballType = 'regular') {
+    this.ballType = ballType
+  }
+}
+
+// Answer 2
+var Ball = function(ballType) {
+  this.ballType = ballType || 'regular';
+};
