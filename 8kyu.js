@@ -887,3 +887,12 @@ function removeChar(str){
   const x = str.substring(1, str.length - 1)
   return x
  };
+
+// Will you make it?
+ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  //  Answer 1
+  return distanceToPump <= mpg * fuelLeft ? true : false
+
+  // Answer 2
+  return distanceToPump/mpg <= fuelLeft
+};
