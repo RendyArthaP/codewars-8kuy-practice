@@ -882,3 +882,8 @@ function apple(x){
     return 'Help yourself to a honeycomb Yorkie for the glovebox.'
   }
 }
+// Remove First and Last Character
+function removeChar(str){
+  const x = str.substring(1, str.length - 1)
+  return x
+ };
