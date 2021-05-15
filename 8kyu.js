@@ -899,5 +899,9 @@ function removeChar(str){
 
 // Remove Exclamationmarks
 function removeExclamationMarks(s) {
+  // Answer 1
   return s.replace(/!/g, '') 
+
+  // Answer 2
+  return s.replace(/!/gi, '');
 }
