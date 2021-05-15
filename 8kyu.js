@@ -896,3 +896,8 @@ function removeChar(str){
   // Answer 2
   return distanceToPump/mpg <= fuelLeft
 };
+
+// Remove Exclamationmarks
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, '') 
+}
